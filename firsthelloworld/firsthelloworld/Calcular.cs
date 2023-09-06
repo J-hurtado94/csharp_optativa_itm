@@ -96,6 +96,36 @@ namespace firsthelloworld
             Console.WriteLine($"El perimetro del radio {PrimerEntradaUsuario} es : {Perimetro}");
         }
 
+        // Solicita al usuario un número entre 1 y 7 y muestra el día de la semana correspondiente, pero solo considerando los días laborables.
+
+        public void MidweekDay()
+        {
+            Console.WriteLine("Ingresa un número del 1 al 7 : ");
+            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            switch (PrimerEntradaUsuario) {
+                case 1:
+                    Console.WriteLine($"El día de la semana es : {DiasSemana.Lunes}");
+                    break;
+                case 2:
+                    Console.WriteLine($"El día de la semana es : {DiasSemana.Martes}");
+                    break;
+                case 3:
+                    Console.WriteLine($"El día de la semana es : {DiasSemana.Miercoles}");
+                    break;
+                case 4:
+                    Console.WriteLine($"El día de la semana es : {DiasSemana.Jueves}");
+                    break;
+                case 5:
+                    Console.WriteLine($"El día de la semana es : {DiasSemana.Viernes}");
+                    break;
+
+                default:
+                    Console.WriteLine("Número fuera del rango laboral.");
+                    break;
+            }
+            
+            
+        }
         //Descripción: Pide un número al usuario y devuelve el factorial de ese número;
         public void FactorialFinder()
         {
@@ -125,6 +155,15 @@ namespace firsthelloworld
         }
     }
 
+    enum DiasSemana { 
+
+        Lunes,
+        Martes,
+        Miercoles,
+        Jueves,
+        Viernes
+
+    }
 }
 
 

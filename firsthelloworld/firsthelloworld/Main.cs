@@ -57,6 +57,7 @@ namespace firsthelloworld
                         calcular.CirclePerimeter();
                         break;
                     case 5:
+                        calcular.MidweekDay();
                         break;
                     case 6:
                         break;
@@ -86,12 +87,12 @@ namespace firsthelloworld
 
                 }
 
-              /*  if (EntradaUsuarioOpcion > 16)
+              if (EntradaUsuarioOpcion > 16)
                 {
                     Console.WriteLine($"La opción {EntradaUsuarioOpcion} es errada , ingresa una opción valida ");
                    
 
-                }*/
+                }
 
                 } while (EntradaUsuarioOpcion != 16) ;
             
