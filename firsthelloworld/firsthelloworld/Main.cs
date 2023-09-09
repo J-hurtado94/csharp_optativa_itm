@@ -60,10 +60,13 @@ namespace firsthelloworld
                         calcular.MidweekDay();
                         break;
                     case 6:
+                        calcular.TaxCalculator();
                         break;
                     case 7:
+                        calcular.RemainderFinder();
                         break;
                     case 8:
+                        calcular.SumOfEvens();
                         break;
                     case 9:
                         break;

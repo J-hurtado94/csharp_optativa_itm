@@ -17,6 +17,18 @@ namespace firsthelloworld
     {
         double PrimerEntradaUsuario;
         double SegundaEntradaUsuario;
+        double impuesto = 15;
+
+        enum DiasSemana
+        {
+
+            Lunes,
+            Martes,
+            Miercoles,
+            Jueves,
+            Viernes
+
+        }
 
 
 
@@ -92,7 +104,7 @@ namespace firsthelloworld
 
             Console.WriteLine("Ingresa el radio de un circulo : ");
             PrimerEntradaUsuario = double.Parse(Console.ReadLine());
-            double Perimetro = 2*Math.PI*PrimerEntradaUsuario;
+            double Perimetro = 2 * Math.PI * PrimerEntradaUsuario;
             Console.WriteLine($"El perimetro del radio {PrimerEntradaUsuario} es : {Perimetro}");
         }
 
@@ -102,7 +114,8 @@ namespace firsthelloworld
         {
             Console.WriteLine("Ingresa un número del 1 al 7 : ");
             PrimerEntradaUsuario = double.Parse(Console.ReadLine());
-            switch (PrimerEntradaUsuario) {
+            switch (PrimerEntradaUsuario)
+            {
                 case 1:
                     Console.WriteLine($"El día de la semana es : {DiasSemana.Lunes}");
                     break;
@@ -123,9 +136,67 @@ namespace firsthelloworld
                     Console.WriteLine("Número fuera del rango laboral.");
                     break;
             }
-            
-            
+
+
         }
+
+
+
+        //Descripción: Solicita al usuario su salario anual y, si este excede los 12000,muestra el impuesto a pagar que es el 15% del excedente.
+        public void TaxCalculator()
+        {
+            double Excedente;
+            Console.WriteLine("Por favor digite su salario anual:");
+            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+
+            if (PrimerEntradaUsuario > 12000)
+            {
+                Excedente = PrimerEntradaUsuario - 12000;
+                Console.WriteLine($"El impuesto a pagar es : {Excedente * impuesto / 100}");
+            }
+            else
+            {
+                Console.WriteLine("No debe impuestos");
+            }
+
+
+
+
+
+
+
+        }
+
+
+        //Descripción: Solicita dos números y muestra el residuo de la división del primero entre el segundo.
+        public void RemainderFinder() {
+            Console.WriteLine("Por favor ingresa el primer numero:");
+            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            Console.WriteLine("Por favor ingresa el segundo numero:");
+            SegundaEntradaUsuario = double.Parse(Console.ReadLine());
+            if (PrimerEntradaUsuario == 0 || SegundaEntradaUsuario == 0)
+            {
+                Console.WriteLine("Por favor ingresar un numero mayor a 0");
+            }
+            else
+            {
+                double Residuo = PrimerEntradaUsuario % SegundaEntradaUsuario;
+                Console.WriteLine($"El residuo es : {Residuo}");
+            }
+        }
+
+        public void SumOfEvens() {
+            int SumaPares=0;
+          for (int i = 0; i <= 50; i++) { 
+                if (i%2==0)
+                {
+                    SumaPares += i;
+
+                }
+            }
+            Console.WriteLine($"La suma de pares es: {SumaPares}");
+        }
+
         //Descripción: Pide un número al usuario y devuelve el factorial de ese número;
         public void FactorialFinder()
         {
@@ -155,15 +226,7 @@ namespace firsthelloworld
         }
     }
 
-    enum DiasSemana { 
 
-        Lunes,
-        Martes,
-        Miercoles,
-        Jueves,
-        Viernes
-
-    }
 }
 
 
