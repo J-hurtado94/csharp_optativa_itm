@@ -15,6 +15,7 @@ namespace firsthelloworld
 
             int EntradaUsuarioOpcion;
             var calcular = new Calcular();
+            var CalcularFraction= new CalcularFraction();
 
             do
             {
@@ -69,6 +70,7 @@ namespace firsthelloworld
                         calcular.SumOfEvens();
                         break;
                     case 9:
+                        CalcularFraction.Difference();
                         break;
                     case 10:
                         break;

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
@@ -196,6 +197,10 @@ namespace firsthelloworld
             }
             Console.WriteLine($"La suma de pares es: {SumaPares}");
         }
+
+        
+
+     
 
         //Descripción: Pide un número al usuario y devuelve el factorial de ese número;
         public void FactorialFinder()
