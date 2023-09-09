@@ -18,7 +18,8 @@ namespace firsthelloworld
     {
         double PrimerEntradaUsuario;
         double SegundaEntradaUsuario;
-        double impuesto = 15;
+        private double impuesto = 15;
+        String EntradaUsuario;
 
         enum DiasSemana
         {
@@ -186,6 +187,8 @@ namespace firsthelloworld
             }
         }
 
+        //Descripción: Calcula y muestra la suma de los números pares entre 1 y 50. 
+
         public void SumOfEvens() {
             int SumaPares=0;
           for (int i = 0; i <= 50; i++) { 
@@ -198,9 +201,22 @@ namespace firsthelloworld
             Console.WriteLine($"La suma de pares es: {SumaPares}");
         }
 
-        
+        //Descripción: Pide una palabra al usuario y muestra la longitud de esa palabra.
+        public void StringLength() {
 
-     
+            Console.WriteLine("Por favor ingresa una palabra:");
+            EntradaUsuario = Console.ReadLine();
+            string CorrectString = EntradaUsuario.Replace(",", "").Replace(".","").Replace(" ","");
+            Console.WriteLine($"El tamaño de la palabra es : {CorrectString.Length}");
+           
+
+
+        }
+
+
+
+
+
 
         //Descripción: Pide un número al usuario y devuelve el factorial de ese número;
         public void FactorialFinder()

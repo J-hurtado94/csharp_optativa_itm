@@ -73,6 +73,7 @@ namespace firsthelloworld
                         CalcularFraction.Difference();
                         break;
                     case 10:
+                        calcular.StringLength();
                         break;
                     case 11:
                         break;
