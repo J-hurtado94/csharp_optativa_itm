@@ -46,6 +46,8 @@ namespace firsthelloworld
                         "16.Salir\n"
                         );
 
+                    Console.WriteLine("Opcion :");
+
                     EntradaUsuarioOpcion = int.Parse(Console.ReadLine());
 
 
