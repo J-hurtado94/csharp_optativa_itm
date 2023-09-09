@@ -16,10 +16,14 @@ namespace firsthelloworld
 
     class Calcular
     {
-        double PrimerEntradaUsuario;
-        double SegundaEntradaUsuario;
+        private double PrimerEntradaUsuario;
+        private double SegundaEntradaUsuario;
+        private double TerceraEntradaUsuario;
+        private double CuartaEntradaUsuario;
         private double impuesto = 15;
-        String EntradaUsuario;
+        private string EntradaUsuario;
+       
+
 
         enum DiasSemana
         {
@@ -171,7 +175,8 @@ namespace firsthelloworld
 
 
         //Descripción: Solicita dos números y muestra el residuo de la división del primero entre el segundo.
-        public void RemainderFinder() {
+        public void RemainderFinder()
+        {
             Console.WriteLine("Por favor ingresa el primer numero:");
             PrimerEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("Por favor ingresa el segundo numero:");
@@ -189,10 +194,12 @@ namespace firsthelloworld
 
         //Descripción: Calcula y muestra la suma de los números pares entre 1 y 50. 
 
-        public void SumOfEvens() {
-            int SumaPares=0;
-          for (int i = 0; i <= 50; i++) { 
-                if (i%2==0)
+        public void SumOfEvens()
+        {
+            int SumaPares = 0;
+            for (int i = 0; i <= 50; i++)
+            {
+                if (i % 2 == 0)
                 {
                     SumaPares += i;
 
@@ -202,14 +209,47 @@ namespace firsthelloworld
         }
 
         //Descripción: Pide una palabra al usuario y muestra la longitud de esa palabra.
-        public void StringLength() {
+        public void StringLength()
+        {
 
             Console.WriteLine("Por favor ingresa una palabra:");
             EntradaUsuario = Console.ReadLine();
-            string CorrectString = EntradaUsuario.Replace(",", "").Replace(".","").Replace(" ","");
+            string CorrectString = EntradaUsuario.Replace(",", "").Replace(".", "").Replace(" ", "");
             Console.WriteLine($"El tamaño de la palabra es : {CorrectString.Length}");
-           
 
+
+
+        }
+
+        //Descripción: Pide al usuario cuatro números y muestra el promedio. 
+
+        public void AverageofFour()
+        {
+            Console.WriteLine("Por favor ingresa cuatro numeros:");
+            Console.WriteLine("Por favor ingresa el primer numero:");
+            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            Console.WriteLine("Por favor ingresa el segundo numero:");
+            SegundaEntradaUsuario = double.Parse(Console.ReadLine());
+            Console.WriteLine("Por favor ingresa el tercer numero:");
+            TerceraEntradaUsuario = double.Parse(Console.ReadLine());
+            Console.WriteLine("Por favor ingresa el cuarto numero:");
+            CuartaEntradaUsuario = double.Parse(Console.ReadLine());
+            Console.WriteLine("");
+
+            List<double> NumerosList = new List<double>();
+            NumerosList.Add(PrimerEntradaUsuario);
+            NumerosList.Add(SegundaEntradaUsuario);
+            NumerosList.Add(TerceraEntradaUsuario);
+            NumerosList.Add(CuartaEntradaUsuario);
+
+            int CantidadDeValores = NumerosList.Count;
+            double SumaDeValores=0;
+            foreach (double numeros in NumerosList)   
+            {
+                SumaDeValores += numeros;
+
+            }
+            Console.WriteLine($"El promedio de los números ingresados es de: {SumaDeValores / CantidadDeValores}");
 
         }
 

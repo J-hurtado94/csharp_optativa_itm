@@ -76,6 +76,7 @@ namespace firsthelloworld
                         calcular.StringLength();
                         break;
                     case 11:
+                        calcular.AverageofFour();
                         break;
                     case 12:
                         break;
