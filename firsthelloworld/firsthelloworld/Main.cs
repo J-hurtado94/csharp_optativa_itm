@@ -14,14 +14,19 @@ namespace firsthelloworld
         {
 
             int EntradaUsuarioOpcion;
+            string NombreUsuario;
             var calcular = new Calcular();
             var CalcularFraction = new CalcularFraction();
 
             try {
+                Console.WriteLine("\n");
+                Console.WriteLine("Ingresa tu nombre : \n");
+                NombreUsuario = Console.ReadLine();
                 do
                 {
+                   
                     Console.WriteLine("\n");
-                    Console.WriteLine("Seleccione una opción : ");
+                    Console.WriteLine($"{NombreUsuario} Bienvenido al menú, seleccione la opción que desea : \n");
                     Console.WriteLine(
                         "1. Positive Power\n" +
                         "2. Double or Triple\n" +
@@ -47,43 +52,43 @@ namespace firsthelloworld
                     switch (EntradaUsuarioOpcion)
                     {
                         case 1:
-                            calcular.PositivePower();
+                            calcular.positivePower();
                             break;
                         case 2:
-                            calcular.DoubleOrTriple();
+                            calcular.doubleOrTriple();
                             break;
                         case 3:
-                            calcular.RootOrSquare();
+                            calcular.rootOrSquare();
                             break;
                         case 4:
-                            calcular.CirclePerimeter();
+                            calcular.circlePerimeter();
                             break;
                         case 5:
-                            calcular.MidweekDay();
+                            calcular.midWeekDay();
                             break;
                         case 6:
-                            calcular.TaxCalculator();
+                            calcular.taxCalculator();
                             break;
                         case 7:
-                            calcular.RemainderFinder();
+                            calcular.remainderFinder();
                             break;
                         case 8:
-                            calcular.SumOfEvens();
+                            calcular.sumOfEvens();
                             break;
                         case 9:
                             CalcularFraction.Difference();
                             break;
                         case 10:
-                            calcular.StringLength();
+                            calcular.stringLength();
                             break;
                         case 11:
-                            calcular.AverageofFour();
+                            calcular.averageOfFour();
                             break;
                         case 12:
-                            calcular.SmallestOfFive();
+                            calcular.smallestOfFive();
                             break;
                         case 13:
-                            calcular.VowelCounter();
+                            calcular.vowelCounter();
                             break;
                         case 14:
                             calcular.FactorialFinder();

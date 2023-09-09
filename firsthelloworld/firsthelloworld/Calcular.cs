@@ -16,13 +16,13 @@ namespace firsthelloworld
 
     class Calcular
     {
-        private double PrimerEntradaUsuario;
-        private double SegundaEntradaUsuario;
-        private double TerceraEntradaUsuario;
-        private double CuartaEntradaUsuario;
-        private double QuintaEntradaUsuario;
+        private double primerEntradaUsuario;
+        private double segundaEntradaUsuario;
+        private double terceraEntradaUsuario;
+        private double cuartaEntradaUsuario;
+        private double quintaEntradaUsuario;
         private double impuesto = 15;
-        private string EntradaUsuario;
+        private string entradaUsuario;
 
 
 
@@ -40,49 +40,49 @@ namespace firsthelloworld
 
 
         //Descripción: Solicita al usuario un número y eleva este número al cuadrado solo si es positivo.
-        public void PositivePower()
+        public void positivePower()
         {
             double resultadoElevadoAlCuadrado;
             Console.WriteLine("Ingresa un numero : ");
-            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            primerEntradaUsuario = double.Parse(Console.ReadLine());
 
-            if (PrimerEntradaUsuario >= 0)
+            if (primerEntradaUsuario >= 0)
             {
-                resultadoElevadoAlCuadrado = PrimerEntradaUsuario * PrimerEntradaUsuario;
-                Console.WriteLine($"El numero {PrimerEntradaUsuario} elevado al cuadrado es : {resultadoElevadoAlCuadrado}");
+                resultadoElevadoAlCuadrado = primerEntradaUsuario * primerEntradaUsuario;
+                Console.WriteLine($"El numero {primerEntradaUsuario} elevado al cuadrado es : {resultadoElevadoAlCuadrado}");
             }
             else
             {
-                Console.Write($"El numero {PrimerEntradaUsuario} no es valido");
+                Console.Write($"El numero {primerEntradaUsuario} no es valido");
             }
 
         }
         //Descripción: Solicita al usuario dos números. Si el primero es mayor, devuelva su doble, de lo contrario devuelva el triple del segundo.
-        public void DoubleOrTriple()
+        public void doubleOrTriple()
         {
             Console.WriteLine("Ingresa dos numeros");
             Console.WriteLine("Ingresa el primer numero");
-            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            primerEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("Ingresa el segundo numero");
-            SegundaEntradaUsuario = double.Parse(Console.ReadLine());
+            segundaEntradaUsuario = double.Parse(Console.ReadLine());
             double resultDoubleOrTriple;
 
-            if (PrimerEntradaUsuario > SegundaEntradaUsuario)
+            if (primerEntradaUsuario > segundaEntradaUsuario)
             {
-                resultDoubleOrTriple = PrimerEntradaUsuario * 2;
+                resultDoubleOrTriple = primerEntradaUsuario * 2;
                 Console.WriteLine($"El resultado es {resultDoubleOrTriple}");
 
             }
-            else if (SegundaEntradaUsuario > PrimerEntradaUsuario)
+            else if (segundaEntradaUsuario > primerEntradaUsuario)
             {
-                resultDoubleOrTriple = SegundaEntradaUsuario * 3;
+                resultDoubleOrTriple = segundaEntradaUsuario * 3;
                 Console.WriteLine($"El restultado es {resultDoubleOrTriple}");
             }
             else
             {
-                if (PrimerEntradaUsuario == SegundaEntradaUsuario)
+                if (primerEntradaUsuario == segundaEntradaUsuario)
                 {
-                    Console.WriteLine($"El resultado es {PrimerEntradaUsuario + SegundaEntradaUsuario}");
+                    Console.WriteLine($"El resultado es {primerEntradaUsuario + segundaEntradaUsuario}");
                 }
 
 
@@ -90,38 +90,38 @@ namespace firsthelloworld
         }
 
         //Descripción: Pide al usuario un número. Si es positivo, devuelve su raíz cuadrada, de lo contrario, devuelve su cuadrado.
-        public void RootOrSquare()
+        public void rootOrSquare()
         {
 
             Console.WriteLine("Ingresa un numero : ");
-            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
-            if (PrimerEntradaUsuario >= 0)
+            primerEntradaUsuario = double.Parse(Console.ReadLine());
+            if (primerEntradaUsuario >= 0)
             {
-                Console.WriteLine($"La raiz cuadrada del {PrimerEntradaUsuario} es: {Math.Sqrt(PrimerEntradaUsuario)}");
+                Console.WriteLine($"La raiz cuadrada del {primerEntradaUsuario} es: {Math.Sqrt(primerEntradaUsuario)}");
             }
             else
             {
-                Console.WriteLine($"El cuadrado del {PrimerEntradaUsuario} es: {(PrimerEntradaUsuario) * (PrimerEntradaUsuario)}");
+                Console.WriteLine($"El cuadrado del {primerEntradaUsuario} es: {(primerEntradaUsuario) * (primerEntradaUsuario)}");
             }
         }
 
 
-        public void CirclePerimeter()
+        public void circlePerimeter()
         {
 
             Console.WriteLine("Ingresa el radio de un circulo : ");
-            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
-            double Perimetro = 2 * Math.PI * PrimerEntradaUsuario;
-            Console.WriteLine($"El perimetro del radio {PrimerEntradaUsuario} es : {Perimetro}");
+            primerEntradaUsuario = double.Parse(Console.ReadLine());
+            double Perimetro = 2 * Math.PI * primerEntradaUsuario;
+            Console.WriteLine($"El perimetro del radio {primerEntradaUsuario} es : {Perimetro}");
         }
 
         // Solicita al usuario un número entre 1 y 7 y muestra el día de la semana correspondiente, pero solo considerando los días laborables.
 
-        public void MidweekDay()
+        public void midWeekDay()
         {
             Console.WriteLine("Ingresa un número del 1 al 7 : ");
-            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
-            switch (PrimerEntradaUsuario)
+            primerEntradaUsuario = double.Parse(Console.ReadLine());
+            switch (primerEntradaUsuario)
             {
                 case 1:
                     Console.WriteLine($"El día de la semana es : {DiasSemana.Lunes}");
@@ -150,15 +150,15 @@ namespace firsthelloworld
 
 
         //Descripción: Solicita al usuario su salario anual y, si este excede los 12000,muestra el impuesto a pagar que es el 15% del excedente.
-        public void TaxCalculator()
+        public void taxCalculator()
         {
             double Excedente;
             Console.WriteLine("Por favor digite su salario anual:");
-            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            primerEntradaUsuario = double.Parse(Console.ReadLine());
 
-            if (PrimerEntradaUsuario > 12000)
+            if (primerEntradaUsuario > 12000)
             {
-                Excedente = PrimerEntradaUsuario - 12000;
+                Excedente = primerEntradaUsuario - 12000;
                 Console.WriteLine($"El impuesto a pagar es : {Excedente * impuesto / 100}");
             }
             else
@@ -176,26 +176,26 @@ namespace firsthelloworld
 
 
         //Descripción: Solicita dos números y muestra el residuo de la división del primero entre el segundo.
-        public void RemainderFinder()
+        public void remainderFinder()
         {
             Console.WriteLine("Por favor ingresa el primer numero:");
-            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            primerEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("Por favor ingresa el segundo numero:");
-            SegundaEntradaUsuario = double.Parse(Console.ReadLine());
-            if (PrimerEntradaUsuario == 0 || SegundaEntradaUsuario == 0)
+            segundaEntradaUsuario = double.Parse(Console.ReadLine());
+            if (primerEntradaUsuario == 0 || segundaEntradaUsuario == 0)
             {
                 Console.WriteLine("Por favor ingresar un numero mayor a 0");
             }
             else
             {
-                double Residuo = PrimerEntradaUsuario % SegundaEntradaUsuario;
+                double Residuo = primerEntradaUsuario % segundaEntradaUsuario;
                 Console.WriteLine($"El residuo es : {Residuo}");
             }
         }
 
         //Descripción: Calcula y muestra la suma de los números pares entre 1 y 50. 
 
-        public void SumOfEvens()
+        public void sumOfEvens()
         {
             int SumaPares = 0;
             for (int i = 0; i <= 50; i++)
@@ -210,12 +210,12 @@ namespace firsthelloworld
         }
 
         //Descripción: Pide una palabra al usuario y muestra la longitud de esa palabra.
-        public void StringLength()
+        public void stringLength()
         {
 
             Console.WriteLine("Por favor ingresa una palabra:");
-            EntradaUsuario = Console.ReadLine();
-            string CorrectString = EntradaUsuario.Replace(",", "").Replace(".", "").Replace(" ", "");
+            entradaUsuario = Console.ReadLine();
+            string CorrectString = entradaUsuario.Replace(",", "").Replace(".", "").Replace(" ", "");
             Console.WriteLine($"El tamaño de la palabra es : {CorrectString.Length}");
 
 
@@ -224,24 +224,24 @@ namespace firsthelloworld
 
         //Descripción: Pide al usuario cuatro números y muestra el promedio. 
 
-        public void AverageofFour()
+        public void averageOfFour()
         {
             Console.WriteLine("Por favor ingresa cuatro numeros");
             Console.WriteLine("Por favor ingresa el primer numero:");
-            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            primerEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("Por favor ingresa el segundo numero:");
-            SegundaEntradaUsuario = double.Parse(Console.ReadLine());
+            segundaEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("Por favor ingresa el tercer numero:");
-            TerceraEntradaUsuario = double.Parse(Console.ReadLine());
+            terceraEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("Por favor ingresa el cuarto numero:");
-            CuartaEntradaUsuario = double.Parse(Console.ReadLine());
+            cuartaEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("");
 
             List<double> NumerosList = new List<double>();
-            NumerosList.Add(PrimerEntradaUsuario);
-            NumerosList.Add(SegundaEntradaUsuario);
-            NumerosList.Add(TerceraEntradaUsuario);
-            NumerosList.Add(CuartaEntradaUsuario);
+            NumerosList.Add(primerEntradaUsuario);
+            NumerosList.Add(segundaEntradaUsuario);
+            NumerosList.Add(terceraEntradaUsuario);
+            NumerosList.Add(cuartaEntradaUsuario);
 
             int CantidadDeValores = NumerosList.Count;
             double SumaDeValores = 0;
@@ -255,67 +255,55 @@ namespace firsthelloworld
         }
 
         //Descripción: Pide al usuario cinco números y muestra el más pequeño
-        public void SmallestOfFive()
+        public void smallestOfFive()
         {
             Console.WriteLine("Por favor ingresa cinco numeros");
             Console.WriteLine("Por favor ingresa el primer numero:");
-            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            primerEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("Por favor ingresa el segundo numero:");
-            SegundaEntradaUsuario = double.Parse(Console.ReadLine());
+            segundaEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("Por favor ingresa el tercer numero:");
-            TerceraEntradaUsuario = double.Parse(Console.ReadLine());
+            terceraEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("Por favor ingresa el cuarto numero:");
-            CuartaEntradaUsuario = double.Parse(Console.ReadLine());
+            cuartaEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("Por favor ingresa el quinto numero:");
-            QuintaEntradaUsuario = double.Parse(Console.ReadLine());
+            quintaEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("");
 
             List<double> ListOfNumbers = new List<double>();
-            ListOfNumbers.Add(PrimerEntradaUsuario);
-            ListOfNumbers.Add(SegundaEntradaUsuario);
-            ListOfNumbers.Add(TerceraEntradaUsuario);
-            ListOfNumbers.Add(CuartaEntradaUsuario);
-            ListOfNumbers.Add(QuintaEntradaUsuario);
+            ListOfNumbers.Add(primerEntradaUsuario);
+            ListOfNumbers.Add(segundaEntradaUsuario);
+            ListOfNumbers.Add(terceraEntradaUsuario);
+            ListOfNumbers.Add(cuartaEntradaUsuario);
+            ListOfNumbers.Add(quintaEntradaUsuario);
 
             Console.WriteLine($"El número mas pequeño es: {ListOfNumbers.Min()}");
 
         }
 
         //Descripción: Pide una palabra al usuario y devuelve el número de vocales enesa palabra.
-        public void VowelCounter()
+        public void vowelCounter()
         {
 
             Console.WriteLine("Por favor ingrese una palabra:");
 
-            EntradaUsuario = Console.ReadLine().ToLower();
+            entradaUsuario = Console.ReadLine().ToLower();
 
-            List<char> EntradaList = EntradaUsuario.ToList();
+            int cantidadVocal=0;
 
+            char[] Vowels = { 'a', 'e', 'i', 'o', 'u' };
 
-            List<char> VowelList = new List<char>();
-
-            VowelList.Add('a');
-            VowelList.Add('e');
-            VowelList.Add('i');
-            VowelList.Add('o');
-            VowelList.Add('u');
-
-            string CantidadVocal = "";
-
-            for (int i = 0; i < EntradaUsuario.Length; i++)
-            {
-                for (int j = 0; j <= EntradaUsuario.Length; j++)
+            foreach (char letras in entradaUsuario) {
+                if (Vowels.Contains(letras))
                 {
-                    if (EntradaList[i] == VowelList[j])
-                    {
-                        CantidadVocal += EntradaList[i];
 
-                    }
-
-
+                    cantidadVocal++;
+                    
                 }
             }
-            Console.WriteLine(CantidadVocal.Length);
+
+             
+            Console.WriteLine(cantidadVocal);
 
 
 
@@ -329,23 +317,23 @@ namespace firsthelloworld
 
             double ResultFactorial = 1;
             Console.WriteLine("Ingresa un numero : ");
-            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            primerEntradaUsuario = double.Parse(Console.ReadLine());
 
-            if (PrimerEntradaUsuario < 0)
+            if (primerEntradaUsuario < 0)
             {
                 Console.WriteLine("El numero ingresado debe ser positivo");
             }
-            else if (PrimerEntradaUsuario == 0)
+            else if (primerEntradaUsuario == 0)
             {
                 Console.WriteLine($"El factorial de 0 siempres es : {ResultFactorial}");
             }
             else
             {
-                for (int i = 1; i <= PrimerEntradaUsuario; i++)
+                for (int i = 1; i <= primerEntradaUsuario; i++)
                 {
                     ResultFactorial *= i;
                 }
-                Console.WriteLine($"El factorial del número {PrimerEntradaUsuario} ingresado es : {ResultFactorial}");
+                Console.WriteLine($"El factorial del número {primerEntradaUsuario} ingresado es : {ResultFactorial}");
             }
 
 
@@ -356,14 +344,14 @@ namespace firsthelloworld
         public void InRangeValidator()
         {
             Console.WriteLine("Ingresa un numero : ");
-            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
-            if (PrimerEntradaUsuario >= 10 && PrimerEntradaUsuario <= 20)
+            primerEntradaUsuario = double.Parse(Console.ReadLine());
+            if (primerEntradaUsuario >= 10 && primerEntradaUsuario <= 20)
             {
-                Console.WriteLine($"El numero {PrimerEntradaUsuario} esta en el rango");
+                Console.WriteLine($"El numero {primerEntradaUsuario} esta en el rango");
             }
             else
             {
-                Console.WriteLine($"El numero {PrimerEntradaUsuario} esta fuera del rango");
+                Console.WriteLine($"El numero {primerEntradaUsuario} esta fuera del rango");
 
             }
 
