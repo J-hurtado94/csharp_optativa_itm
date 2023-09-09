@@ -350,7 +350,25 @@ namespace firsthelloworld
 
 
             }
+
+        public void InRangeValidator()
+        {
+            Console.WriteLine("Ingresa un numero : ");
+            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            if (PrimerEntradaUsuario>= 10 && PrimerEntradaUsuario <=20)
+            {
+                Console.WriteLine($"El numero {PrimerEntradaUsuario} esta en el rango");
+            }
+            else
+            {
+                Console.WriteLine($"El numero {PrimerEntradaUsuario} esta fuera del rango");
+
+            }
+
         }
+    }
+
+    
 
 
     }

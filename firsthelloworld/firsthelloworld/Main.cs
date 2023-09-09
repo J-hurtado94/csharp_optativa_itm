@@ -88,6 +88,7 @@ namespace firsthelloworld
                         calcular.FactorialFinder();
                         break;
                     case 15:
+                        calcular.InRangeValidator();
                         break;
                     case 16:
                         Console.WriteLine("Saliendo...");
