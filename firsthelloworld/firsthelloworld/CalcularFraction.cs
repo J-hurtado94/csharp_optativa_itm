@@ -1,10 +1,11 @@
-﻿using System;
+﻿using firsthelloworld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ejerciciosoptativa
+namespace firsthelloworld
 {
     //Descripción: Solicita al usuario los valores para dos fracciones y muestra la diferencia entre esas fracciones.
     internal class CalcularFraction
