@@ -20,9 +20,10 @@ namespace firsthelloworld
         private double SegundaEntradaUsuario;
         private double TerceraEntradaUsuario;
         private double CuartaEntradaUsuario;
+        private double QuintaEntradaUsuario;
         private double impuesto = 15;
         private string EntradaUsuario;
-       
+
 
 
         enum DiasSemana
@@ -225,7 +226,7 @@ namespace firsthelloworld
 
         public void AverageofFour()
         {
-            Console.WriteLine("Por favor ingresa cuatro numeros:");
+            Console.WriteLine("Por favor ingresa cuatro numeros");
             Console.WriteLine("Por favor ingresa el primer numero:");
             PrimerEntradaUsuario = double.Parse(Console.ReadLine());
             Console.WriteLine("Por favor ingresa el segundo numero:");
@@ -243,8 +244,8 @@ namespace firsthelloworld
             NumerosList.Add(CuartaEntradaUsuario);
 
             int CantidadDeValores = NumerosList.Count;
-            double SumaDeValores=0;
-            foreach (double numeros in NumerosList)   
+            double SumaDeValores = 0;
+            foreach (double numeros in NumerosList)
             {
                 SumaDeValores += numeros;
 
@@ -253,42 +254,106 @@ namespace firsthelloworld
 
         }
 
+        //Descripción: Pide al usuario cinco números y muestra el más pequeño
+        public void SmallestOfFive()
+        {
+            Console.WriteLine("Por favor ingresa cinco numeros");
+            Console.WriteLine("Por favor ingresa el primer numero:");
+            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            Console.WriteLine("Por favor ingresa el segundo numero:");
+            SegundaEntradaUsuario = double.Parse(Console.ReadLine());
+            Console.WriteLine("Por favor ingresa el tercer numero:");
+            TerceraEntradaUsuario = double.Parse(Console.ReadLine());
+            Console.WriteLine("Por favor ingresa el cuarto numero:");
+            CuartaEntradaUsuario = double.Parse(Console.ReadLine());
+            Console.WriteLine("Por favor ingresa el quinto numero:");
+            QuintaEntradaUsuario = double.Parse(Console.ReadLine());
+            Console.WriteLine("");
 
+            List<double> ListOfNumbers = new List<double>();
+            ListOfNumbers.Add(PrimerEntradaUsuario);
+            ListOfNumbers.Add(SegundaEntradaUsuario);
+            ListOfNumbers.Add(TerceraEntradaUsuario);
+            ListOfNumbers.Add(CuartaEntradaUsuario);
+            ListOfNumbers.Add(QuintaEntradaUsuario);
 
+            Console.WriteLine($"El número mas pequeño es: {ListOfNumbers.Min()}");
 
+        }
 
-
-        //Descripción: Pide un número al usuario y devuelve el factorial de ese número;
-        public void FactorialFinder()
+        //Descripción: Pide una palabra al usuario y devuelve el número de vocales enesa palabra.
+        public void VowelCounter()
         {
 
-            double ResultFactorial = 1;
-            Console.WriteLine("Ingresa un numero : ");
-            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+            Console.WriteLine("Por favor ingrese una palabra:");
 
-            if (PrimerEntradaUsuario < 0)
+            EntradaUsuario = Console.ReadLine().ToLower();
+
+            List<char> EntradaList = EntradaUsuario.ToList();
+
+
+            List<char> VowelList = new List<char>();
+
+            VowelList.Add('a');
+            VowelList.Add('e');
+            VowelList.Add('i');
+            VowelList.Add('o');
+            VowelList.Add('u');
+
+            string CantidadVocal="";
+
+            for (int i = 0; i < EntradaUsuario.Length; i++)
             {
-                Console.WriteLine("El numero ingresado debe ser positivo");
-            }
-            else if (PrimerEntradaUsuario == 0)
-            {
-                Console.WriteLine($"El factorial de 0 siempres es : {ResultFactorial}");
-            }
-            else
-            {
-                for (int i = 1; i <= PrimerEntradaUsuario; i++)
+                for (int j = 0;  j <=EntradaUsuario.Length;  j++)
                 {
-                    ResultFactorial *= i;
+                    if (EntradaList[i] == VowelList[j])
+                    {
+                        CantidadVocal += EntradaList[i];
+                        
+                    }
+
+
                 }
-                Console.WriteLine($"El factorial del número {PrimerEntradaUsuario} ingresado es : {ResultFactorial}");
             }
+            Console.WriteLine(CantidadVocal.Length);
+
+
 
 
         }
+
+
+            //Descripción: Pide un número al usuario y devuelve el factorial de ese número;
+            public void FactorialFinder()
+            {
+
+                double ResultFactorial = 1;
+                Console.WriteLine("Ingresa un numero : ");
+                PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+
+                if (PrimerEntradaUsuario < 0)
+                {
+                    Console.WriteLine("El numero ingresado debe ser positivo");
+                }
+                else if (PrimerEntradaUsuario == 0)
+                {
+                    Console.WriteLine($"El factorial de 0 siempres es : {ResultFactorial}");
+                }
+                else
+                {
+                    for (int i = 1; i <= PrimerEntradaUsuario; i++)
+                    {
+                        ResultFactorial *= i;
+                    }
+                    Console.WriteLine($"El factorial del número {PrimerEntradaUsuario} ingresado es : {ResultFactorial}");
+                }
+
+
+            }
+        }
+
+
     }
-
-
-}
 
 
 

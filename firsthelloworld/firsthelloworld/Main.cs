@@ -79,8 +79,10 @@ namespace firsthelloworld
                         calcular.AverageofFour();
                         break;
                     case 12:
+                        calcular.SmallestOfFive();
                         break;
                     case 13:
+                        calcular.VowelCounter();
                         break;
                     case 14:
                         calcular.FactorialFinder();
