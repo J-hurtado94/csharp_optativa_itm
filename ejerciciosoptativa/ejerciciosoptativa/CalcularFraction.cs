@@ -15,9 +15,9 @@ namespace firsthelloworld
         {
             try
             {
-                Console.WriteLine("Por favor ingresa la primer fraccion:");
+                Console.WriteLine("Por favor ingresa la primer fraccion, de la siguiente manera 1/2:");
                 PrimerEntradaUsuario = Console.ReadLine();
-                Console.WriteLine("Por favor ingresa la Segunda fraccion:");
+                Console.WriteLine("Por favor ingresa la Segunda fraccion, de la siguiente manera 1/2 :");
                 SegundaEntradaUsuario = Console.ReadLine();
                 string[] FraccionUnoWithOutSlash = PrimerEntradaUsuario.Split('/');
                 string[] FraccionDosWithOutSlash = SegundaEntradaUsuario.Split('/');
