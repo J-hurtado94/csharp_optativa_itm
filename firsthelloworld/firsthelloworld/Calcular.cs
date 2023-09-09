@@ -303,7 +303,7 @@ namespace firsthelloworld
             }
 
              
-            Console.WriteLine(cantidadVocal);
+            Console.WriteLine($"La cantidad de vocales que tiene la palabra {entradaUsuario} es de: {cantidadVocal}");
 
 
 

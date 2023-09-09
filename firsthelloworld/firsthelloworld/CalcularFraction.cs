@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace firsthelloworld
+namespace ejerciciosoptativa
 {
     //Descripción: Solicita al usuario los valores para dos fracciones y muestra la diferencia entre esas fracciones.
     internal class CalcularFraction
@@ -15,9 +15,9 @@ namespace firsthelloworld
         {
             try
             {
-                Console.WriteLine("Por favor ingresa la primer fraccion:");
+                Console.WriteLine("Por favor ingresa la primer fraccion, de la siguiente manera 1/2:");
                 PrimerEntradaUsuario = Console.ReadLine();
-                Console.WriteLine("Por favor ingresa la Segunda fraccion:");
+                Console.WriteLine("Por favor ingresa la Segunda fraccion, de la siguiente manera 1/2 :");
                 SegundaEntradaUsuario = Console.ReadLine();
                 string[] FraccionUnoWithOutSlash = PrimerEntradaUsuario.Split('/');
                 string[] FraccionDosWithOutSlash = SegundaEntradaUsuario.Split('/');

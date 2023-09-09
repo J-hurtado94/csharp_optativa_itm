@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace firsthelloworld
+namespace ejerciciosoptativa
 {
     class Ejecucion
     {
