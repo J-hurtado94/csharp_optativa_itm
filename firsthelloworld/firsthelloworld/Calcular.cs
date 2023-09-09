@@ -300,16 +300,16 @@ namespace firsthelloworld
             VowelList.Add('o');
             VowelList.Add('u');
 
-            string CantidadVocal="";
+            string CantidadVocal = "";
 
             for (int i = 0; i < EntradaUsuario.Length; i++)
             {
-                for (int j = 0;  j <=EntradaUsuario.Length;  j++)
+                for (int j = 0; j <= EntradaUsuario.Length; j++)
                 {
                     if (EntradaList[i] == VowelList[j])
                     {
                         CantidadVocal += EntradaList[i];
-                        
+
                     }
 
 
@@ -323,39 +323,41 @@ namespace firsthelloworld
         }
 
 
-            //Descripción: Pide un número al usuario y devuelve el factorial de ese número;
-            public void FactorialFinder()
+        //Descripción: Pide un número al usuario y devuelve el factorial de ese número;
+        public void FactorialFinder()
+        {
+
+            double ResultFactorial = 1;
+            Console.WriteLine("Ingresa un numero : ");
+            PrimerEntradaUsuario = double.Parse(Console.ReadLine());
+
+            if (PrimerEntradaUsuario < 0)
             {
-
-                double ResultFactorial = 1;
-                Console.WriteLine("Ingresa un numero : ");
-                PrimerEntradaUsuario = double.Parse(Console.ReadLine());
-
-                if (PrimerEntradaUsuario < 0)
+                Console.WriteLine("El numero ingresado debe ser positivo");
+            }
+            else if (PrimerEntradaUsuario == 0)
+            {
+                Console.WriteLine($"El factorial de 0 siempres es : {ResultFactorial}");
+            }
+            else
+            {
+                for (int i = 1; i <= PrimerEntradaUsuario; i++)
                 {
-                    Console.WriteLine("El numero ingresado debe ser positivo");
+                    ResultFactorial *= i;
                 }
-                else if (PrimerEntradaUsuario == 0)
-                {
-                    Console.WriteLine($"El factorial de 0 siempres es : {ResultFactorial}");
-                }
-                else
-                {
-                    for (int i = 1; i <= PrimerEntradaUsuario; i++)
-                    {
-                        ResultFactorial *= i;
-                    }
-                    Console.WriteLine($"El factorial del número {PrimerEntradaUsuario} ingresado es : {ResultFactorial}");
-                }
-
-
+                Console.WriteLine($"El factorial del número {PrimerEntradaUsuario} ingresado es : {ResultFactorial}");
             }
 
+
+        }
+
+
+        //Descripción: Pide un número al usuario y verifica si está en el rango de 10 a 20 (ambos incluidos).
         public void InRangeValidator()
         {
             Console.WriteLine("Ingresa un numero : ");
             PrimerEntradaUsuario = double.Parse(Console.ReadLine());
-            if (PrimerEntradaUsuario>= 10 && PrimerEntradaUsuario <=20)
+            if (PrimerEntradaUsuario >= 10 && PrimerEntradaUsuario <= 20)
             {
                 Console.WriteLine($"El numero {PrimerEntradaUsuario} esta en el rango");
             }
@@ -368,10 +370,10 @@ namespace firsthelloworld
         }
     }
 
-    
 
 
-    }
+
+}
 
 
 
